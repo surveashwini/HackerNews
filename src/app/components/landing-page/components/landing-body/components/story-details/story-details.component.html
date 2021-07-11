@@ -1,0 +1,27 @@
+<div class="story-details-container">
+  <span *ngIf="!isCommentContainer" class="story-index">{{ index + 1 }}.</span>
+  <span class="story-icon">
+    <img src="../../../../../assets/grayarrow.gif" />
+  </span>
+  <span class="story-details">
+    <span class="story-title-url">
+      <span class="story-title" [ngClass]="{ 'grey-text': isCommentContainer }"
+        >{{ story.title }}
+      </span>
+      <a class="story-url" href="{{ story.url }}"
+        >({{ story.url | formatUrl }})</a
+      >
+    </span>
+    <span class="story-other-details">
+      <span class="story-score-by"
+        >{{ story.score }} points by
+        <span class="story-by">{{ story.by }}</span></span
+      >
+      <span class="story-time"> {{ story.time | dateAgo }}</span>
+      <span class="story-hide">hide</span>
+      <span class="story-comments" (click)="showComments()">
+        {{ story.kids?.length }} comments
+      </span>
+    </span>
+  </span>
+</div>

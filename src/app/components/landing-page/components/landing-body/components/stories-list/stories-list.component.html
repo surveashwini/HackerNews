@@ -1,0 +1,8 @@
+<div class="story-main-details" *ngFor="let story of news; let i = index">
+  <hacker-news-story-details
+    [isCommentContainer]="false"
+    [story]="story"
+    [index]="i"
+    (emitShowComments)="emitShowComments.emit($event)"
+  ></hacker-news-story-details>
+</div>

@@ -1,0 +1,13 @@
+.landing-page-container {
+  width: 85%;
+  height: 100%;
+  background-color: rgb(246, 246, 239);
+}
+
+@media screen and (max-width: 750px) {
+  .landing-page-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 246, 239);
+  }
+}

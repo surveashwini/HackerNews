@@ -1,0 +1,42 @@
+<div class="story-comments-container">
+  <hacker-news-story-details
+    [isCommentContainer]="true"
+    [story]="story"
+    [index]="index"
+  ></hacker-news-story-details>
+  <div class="story-add-comment-section">
+    <textarea
+      id="story-text-area"
+      name="story-text-area"
+      rows="8"
+      cols="50"
+    ></textarea>
+    <div class="story-add-comment-button"><button>add comment</button></div>
+  </div>
+  <div class="story-top-comments-container">
+    <div class="comment" *ngFor="let comment of comments; let i = index">
+      <div class="comment-header">
+        <span class="comment-icon">
+          <img src="../../../../../assets/grayarrow.gif" />
+        </span>
+        <span class="comment-author">{{ comment.by }}</span>
+        <span class="comment-time">{{ comment.time | dateAgo }}</span>
+        <span class="comment-toggle" (click)="toggle(i)">
+          <span *ngIf="showCommentText[i].showText; else commentLength"
+            >[-]</span
+          >
+          <ng-template #commentLength>
+            <span *ngIf="comment?.kids?.length > 0"
+              >[{{ comment?.kids?.length }} more]</span
+            >
+          </ng-template>
+        </span>
+      </div>
+      <div
+        class="comment-body"
+        *ngIf="showCommentText[i].showText"
+        [innerHTML]="comment.text"
+      ></div>
+    </div>
+  </div>
+</div>

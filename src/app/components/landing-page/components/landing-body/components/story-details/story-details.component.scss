@@ -1,0 +1,48 @@
+.story-details-container {
+  display: flex;
+  flex-direction: row;
+
+  .story-icon {
+    color: #000000;
+    cursor: pointer;
+    padding-right: 2px;
+  }
+  .story-details {
+    word-break: break-word;
+    display: inline-flex;
+    flex-direction: column;
+
+    .story-title {
+      color: #000000;
+      &.grey-text {
+        color: #828282;
+      }
+    }
+    .story-url {
+      font-size: 8pt;
+      cursor: pointer;
+      text-decoration: none;
+      color: #828282;
+    }
+    .story-other-details {
+      font-size: 7pt;
+      margin-top: 3px;
+
+      .story-time::after,
+      .story-hide::after {
+        padding: 3px;
+        content: "|";
+      }
+
+      .story-by,
+      .story-time,
+      .story-hide,
+      .story-comments {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

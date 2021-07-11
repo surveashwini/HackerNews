@@ -1,0 +1,49 @@
+.story-comments-container {
+  margin: 10px;
+
+  .story-details-container .story-details .story-title {
+    color: #828282;
+  }
+
+  .story-add-comment-section {
+    margin: 15px;
+
+    .story-add-comment-button button {
+      width: fit-content;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-family: monospace;
+      font-size: 10pt;
+      cursor: pointer;
+    }
+  }
+
+  .story-top-comments-container {
+    .comment {
+      overflow-wrap: anywhere;
+      .comment-header {
+        font-size: 8pt;
+
+        .comment-icon,
+        .comment-author,
+        .comment-time {
+          margin-right: 3px;
+        }
+
+        .comment-toggle {
+          cursor: pointer;
+        }
+      }
+
+      .comment-body {
+        margin-top: 7px;
+        margin-left: 13px;
+        margin-bottom: 7px;
+        color: rgb(0, 0, 0);
+        p a {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}
