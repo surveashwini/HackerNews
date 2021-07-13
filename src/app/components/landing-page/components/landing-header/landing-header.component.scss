@@ -28,7 +28,7 @@
         width: 88%;
         margin-left: 2px;
 
-        a {
+        .header-menus {
           font-weight: 500;
           margin-left: 7px;
           line-height: 25px;
@@ -46,7 +46,7 @@
     }
   }
   .landing-header-right-menus {
-    a {
+    .header-menus {
       display: flex;
       flex-direction: row-reverse;
       margin-right: 10px;

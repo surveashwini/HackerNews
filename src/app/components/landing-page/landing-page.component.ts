@@ -21,20 +21,29 @@ export class LandingPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.processDataService.getTopStories()?.subscribe((stories: any) => {
-      this.stories = stories;
-      this.cdr.detectChanges();
-    });
+    this.processDataService.getTopStories()?.subscribe(
+      (stories: any) => {
+        this.stories = stories;
+        console.log(this.stories);
+        this.cdr.detectChanges();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   showComments(i: number) {
-    console.log('landingpage', i);
     this.processDataService
       .getTopCommentsForStory(this.stories[i].kids.slice(0, 3))
-      ?.subscribe((comments: any) => {
-        this.comments = comments;
-
-        this.cdr.detectChanges();
-      });
+      ?.subscribe(
+        (comments: any) => {
+          this.comments = comments;
+          this.cdr.detectChanges();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   }
 }

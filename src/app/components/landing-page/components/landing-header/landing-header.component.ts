@@ -3,13 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'hacker-news-landing-header',
   templateUrl: './landing-header.component.html',
-  styleUrls: ['./landing-header.component.scss']
+  styleUrls: ['./landing-header.component.scss'],
 })
-export class LandingHeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class LandingHeaderComponent {}

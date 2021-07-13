@@ -8,9 +8,8 @@ describe('LandingFooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LandingFooterComponent ]
-    })
-    .compileComponents();
+      declarations: [LandingFooterComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,19 @@ describe('LandingFooterComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have heading Hacker News', () => {
+    let element = fixture.nativeElement.querySelector('.footer-links');
+    expect(element.textContent).toEqual(
+      'GuidelinesFAQListsAPISecurityLegalApply to YCContact'
+    );
+  });
+
+  it('should have header menus', () => {
+    let firstMenuElement = fixture.nativeElement.querySelector(
+      '.footer-input label'
+    );
+    expect(firstMenuElement.textContent).toEqual('Search: ');
   });
 });

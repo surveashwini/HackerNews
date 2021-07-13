@@ -8,9 +8,8 @@ describe('LandingHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LandingHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [LandingHeaderComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,17 @@ describe('LandingHeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have heading Hacker News', () => {
+    let element = fixture.nativeElement.querySelector(
+      'span.landing-header-title'
+    );
+    expect(element.textContent).toEqual('Hacker News');
+  });
+
+  it('should have header menus', () => {
+    let firstMenuElement = fixture.nativeElement.querySelector('.header-menus');
+    expect(firstMenuElement.textContent).toEqual('new');
   });
 });

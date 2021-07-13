@@ -8,15 +8,13 @@ describe('LandingBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LandingBodyComponent ]
-    })
-    .compileComponents();
+      declarations: [LandingBodyComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LandingBodyComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

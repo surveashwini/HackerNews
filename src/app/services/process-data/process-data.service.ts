@@ -7,8 +7,6 @@ import { NewsDataService } from '../news-data/news-data.service';
   providedIn: 'root',
 })
 export class ProcessDataService {
-  topStories: any = [];
-  topStoriesObservable: any;
   constructor(private newsDataService: NewsDataService) {}
 
   getTopStories() {
@@ -30,7 +28,6 @@ export class ProcessDataService {
     let commentAPIs = commentIds.map((commentId) =>
       this.newsDataService.getComment(commentId)
     );
-
     return zip(...commentAPIs);
   }
 }

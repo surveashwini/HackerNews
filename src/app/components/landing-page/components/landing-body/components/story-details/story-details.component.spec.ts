@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DateAgoPipe } from 'src/app/pipes/date-ago.pipe';
+import { FormatUrlPipe } from 'src/app/pipes/format-url.pipe';
 
 import { StoryDetailsComponent } from './story-details.component';
 
@@ -8,9 +10,8 @@ describe('StoryDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StoryDetailsComponent ]
-    })
-    .compileComponents();
+      declarations: [FormatUrlPipe, DateAgoPipe, StoryDetailsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
