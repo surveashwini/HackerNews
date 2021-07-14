@@ -1,4 +1,25 @@
-.landing-page {
+.app-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  .landing-page-container {
+    background-color: rgb(246, 246, 239);
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .app-container {
+    .landing-page-container {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(246, 246, 239);
+    }
+  }
 }

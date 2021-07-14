@@ -1,0 +1,90 @@
+.landing-header {
+  background-color: rgb(255, 102, 0);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #222222;
+  line-height: 12pt;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .landing-header-center {
+    display: inline-flex;
+
+    .landing-header-icon {
+      border: 1px solid rgb(255, 255, 255);
+      margin: 2px;
+    }
+    .landing-header-center-menus {
+      color: #000000;
+      .landing-header-title {
+        font-weight: bolder;
+        cursor: pointer;
+        align-self: center;
+        min-width: fit-content;
+      }
+
+      .landing-header-menus {
+        width: 88%;
+        margin-left: 2px;
+
+        .header-menus {
+          font-weight: 500;
+          margin-left: 6px;
+
+          line-height: 25px;
+          cursor: pointer;
+
+          &:not(:last-child):after {
+            color: #000;
+            content: "  |";
+            cursor: text;
+          }
+          &:last-child {
+            flex-direction: row-reverse;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .landing-header-right-menus {
+    .header-menus {
+      color: #000;
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .landing-header {
+    color: black;
+    .landing-header-center {
+      .landing-header-icon {
+        height: 15%;
+        margin: auto;
+      }
+      .landing-header-center-menus {
+        display: flex;
+        flex-direction: column;
+
+        .landing-header-title {
+          align-self: flex-start;
+          margin-left: 8px;
+          font-size: 15px;
+          font-weight: 900;
+          margin-top: 5px;
+        }
+        .landing-header-menus {
+          width: auto;
+          margin-top: -5px;
+          font-size: 9pt;
+        }
+      }
+    }
+  }
+}

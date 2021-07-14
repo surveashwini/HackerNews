@@ -12,9 +12,9 @@ export class ProcessDataService {
   getTopStories() {
     return this.newsDataService.getTopStories().pipe(
       concatMap((topStoryIds) => {
-        let topFiveStoryIds = topStoryIds.slice(0, 5);
+        let topFiveStoryIds = topStoryIds?.slice(0, 5);
         let storyInfoObservables: Array<any> = [];
-        topFiveStoryIds.forEach((storyId: string) => {
+        topFiveStoryIds?.forEach((storyId: string) => {
           storyInfoObservables.push(
             this.newsDataService.getStoryDetails(storyId)
           );
@@ -25,9 +25,10 @@ export class ProcessDataService {
   }
 
   getTopCommentsForStory(commentIds: Array<number>) {
-    let commentAPIs = commentIds.map((commentId) =>
-      this.newsDataService.getComment(commentId)
-    );
+    let commentAPIs =
+      commentIds?.map((commentId) =>
+        this.newsDataService.getComment(commentId)
+      ) || [];
     return zip(...commentAPIs);
   }
 }
