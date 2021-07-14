@@ -24,7 +24,6 @@ export class LandingPageComponent implements OnInit {
     this.processDataService.getTopStories()?.subscribe(
       (stories: any) => {
         this.stories = stories;
-        console.log(this.stories);
         this.cdr.detectChanges();
       },
       (error) => {
