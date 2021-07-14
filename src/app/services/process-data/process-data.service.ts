@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { from, Observable, zip } from 'rxjs';
+import { zip } from 'rxjs';
 import { concatMap } from 'rxjs/operators';
 import { NewsDataService } from '../news-data/news-data.service';
 

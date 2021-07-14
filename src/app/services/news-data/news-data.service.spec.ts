@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import {
   HttpClientTestingModule,
   HttpTestingController,
@@ -6,7 +6,6 @@ import {
 import { NewsDataService } from './news-data.service';
 import { StoryInfo } from 'src/app/models/story-info';
 import { CommentInfo } from 'src/app/models/comment-info';
-import { HttpClient } from '@angular/common/http';
 import {
   COMMENTS,
   STORIES,

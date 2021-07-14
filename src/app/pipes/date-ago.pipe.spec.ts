@@ -1,3 +1,4 @@
+import { DAYS_AGO } from '../constants/statics/statics';
 import { DateAgoPipe } from './date-ago.pipe';
 
 function getDiffDays(timestamp: number) {
@@ -33,13 +34,15 @@ describe('DateAgoPipe', () => {
 
   it('converts the timestamp to days ago format', () => {
     let diffDays = getDiffDays(1626090191);
-    expect(pipeInstance.transform(1626090191)).toEqual(`${diffDays} days ago`);
+    expect(pipeInstance.transform(1626090191)).toEqual(
+      `${diffDays}${DAYS_AGO}`
+    );
   });
 
   it('converts the timestamp to days ago format', () => {
     let diffDays = getDiffDays(1562265000000);
     expect(pipeInstance.transform(1562265000000)).toEqual(
-      `${diffDays} days ago`
+      `${diffDays}${DAYS_AGO}`
     );
   });
 });

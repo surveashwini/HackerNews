@@ -15,4 +15,8 @@ describe('FormatUrlPipe', () => {
       'abc.com'
     );
   });
+
+  it('converts null value to empty string', () => {
+    expect(pipeInstance.transform(null)).toEqual('');
+  });
 });

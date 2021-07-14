@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { DAYS_AGO, TODAY } from '../constants/statics/statics';
 
 @Pipe({
   name: 'dateAgo',
@@ -7,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DateAgoPipe implements PipeTransform {
   transform(value: any, args?: any): any {
     if (value) {
-      const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+      const oneDay = 24 * 60 * 60 * 1000;
       const today = new Date();
       const firstDate = new Date(
         today.getFullYear(),
@@ -25,9 +26,9 @@ export class DateAgoPipe implements PipeTransform {
         Math.abs((firstDate.getTime() - secondDate.getTime()) / oneDay)
       );
       if (diffDays === 0) {
-        return 'Today';
+        return TODAY;
       } else {
-        return diffDays + ' days ago';
+        return `${diffDays}${DAYS_AGO}`;
       }
     }
     return value;

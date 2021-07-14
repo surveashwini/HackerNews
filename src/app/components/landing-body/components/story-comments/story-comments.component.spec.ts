@@ -96,7 +96,6 @@ describe('StoryCommentsComponent', () => {
   }));
 
   it('it should assign comments on init from Server response', fakeAsync(() => {
-    var store = {};
     spyOn(localStorage, 'getItem').and.callFake(function () {
       return null;
     });
