@@ -1,27 +1,25 @@
-# HackerNews
+**Test coverage:**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+![Screenshot 2021-07-15 at 9 09 34 AM](https://user-images.githubusercontent.com/4570109/125726955-a9ec6bdc-c895-49af-aee2-543498f5963e.png)
 
-## Development server
+**Responsive:**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  **Iphone X:**
 
-## Code scaffolding
+  ![Screenshot 2021-07-15 at 9 26 30 AM](https://user-images.githubusercontent.com/4570109/125726983-441b5773-bdeb-4d0a-935e-de1287a14469.png)
+  ![Screenshot 2021-07-15 at 9 26 43 AM](https://user-images.githubusercontent.com/4570109/125726985-392ebeb0-727a-43cb-9dcb-25b2e7e7875f.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Desktop:**
 
-## Build
+  **Main Page:**
+  ![Screenshot 2021-07-15 at 9 10 06 AM](https://user-images.githubusercontent.com/4570109/125727019-ac58bc94-1f21-4c16-a49e-e35eb6397e74.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  **Comments Section:**
 
-## Running unit tests
+  **Comments Expanded:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  ![Screenshot 2021-07-15 at 9 31 31 AM](https://user-images.githubusercontent.com/4570109/125727191-751f5e3d-51e1-4abe-9b82-cc93869fa4b4.png)
 
-## Running end-to-end tests
+  **Comments Collapsed:**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ![Screenshot 2021-07-15 at 9 31 54 AM](https://user-images.githubusercontent.com/4570109/125727208-59010db9-0d2e-405e-8d13-4915a51a694a.png)
