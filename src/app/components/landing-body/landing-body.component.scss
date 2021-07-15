@@ -4,3 +4,21 @@
   font-size: 10pt;
   color: #828282;
 }
+
+@media screen and (max-width: 500px) {
+  .landing-body-container {
+    min-height: 75vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .landing-body-container {
+    min-height: 60vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .landing-body-container {
+    min-height: 45vh;
+  }
+}
