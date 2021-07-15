@@ -1,6 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DAYS_AGO, TODAY } from '../constants/statics/statics';
 
+/**
+ * This pipe will accept a timestamp
+ * and calculate how old is the timestamp from today
+ */
 @Pipe({
   name: 'dateAgo',
   pure: true,

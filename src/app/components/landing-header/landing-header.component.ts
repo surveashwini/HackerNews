@@ -6,4 +6,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./landing-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LandingHeaderComponent {}
+export class LandingHeaderComponent {
+  isResponsive: boolean = false;
+  constructor() {}
+
+  /**
+   * This method will add a responsive class for the responsive menus
+   */
+  showMenus() {
+    this.isResponsive = !this.isResponsive;
+  }
+}

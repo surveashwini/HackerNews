@@ -1,5 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * This pipe will accept a url and return the domain of the url
+ */
 @Pipe({
   name: 'formatUrl',
   pure: true,

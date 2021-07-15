@@ -11,9 +11,8 @@ describe('FormatUrlPipe', () => {
   });
 
   it('converts the entire url to only domain', () => {
-    expect(pipeInstance.transform('http://abc.com/page/?abc=12344')).toEqual(
-      'abc.com'
-    );
+    const url = 'http://abc.com/page/?abc=12344';
+    expect(pipeInstance.transform(url)).toEqual('abc.com');
   });
 
   it('converts null value to empty string', () => {

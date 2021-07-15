@@ -23,3 +23,11 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .app-container {
+    .landing-page-container {
+      overflow: hidden;
+    }
+  }
+}

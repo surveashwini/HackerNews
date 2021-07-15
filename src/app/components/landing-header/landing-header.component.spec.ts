@@ -26,7 +26,7 @@ describe('LandingHeaderComponent', () => {
     let element = fixture.nativeElement.querySelector(
       'span.landing-header-title'
     );
-    expect(element.textContent).toEqual('Hacker News');
+    expect(element.textContent).toEqual('Hacker News ');
   });
 
   it('should have header menus', () => {

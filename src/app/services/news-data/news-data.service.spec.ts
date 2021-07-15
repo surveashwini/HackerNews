@@ -11,6 +11,11 @@ import {
   STORIES,
   STORY_IDS,
 } from 'src/app/constants/test-mocks/test-mock-data';
+import {
+  COMMENT_DETAILS,
+  STORY_DETAILS,
+  TOP_STORIES,
+} from 'src/app/constants/api-urls/api-urls';
 
 describe('NewsDataService', () => {
   let httpTestingController: HttpTestingController;
@@ -36,7 +41,7 @@ describe('NewsDataService', () => {
 
   it('#getTopStories should return array of story ids data', (done) => {
     const expectedData: number[] = STORY_IDS;
-    const mockUrl = 'https://hacker-news.firebaseio.com/v0/topstories.json';
+    const mockUrl = TOP_STORIES;
 
     service.getTopStories().subscribe((data) => {
       expect(data).toEqual(expectedData);
@@ -50,9 +55,7 @@ describe('NewsDataService', () => {
 
   it('#getStoryDetails should return array of story details', (done) => {
     const expectedData: StoryInfo = STORIES[0];
-    const mockUrl: string =
-      'https://hacker-news.firebaseio.com/v0/item/27809153.json';
-
+    const mockUrl: string = STORY_DETAILS('27809153');
     service.getStoryDetails(STORIES[0].id.toString()).subscribe((data) => {
       expect(data).toEqual(expectedData);
       done();
@@ -65,8 +68,7 @@ describe('NewsDataService', () => {
 
   it('#getComment should return array of comment details', (done) => {
     const expectedData: CommentInfo = COMMENTS[0];
-    const mockCommentUrl: string =
-      'https://hacker-news.firebaseio.com/v0/item/27830788.json';
+    const mockCommentUrl: string = COMMENT_DETAILS(27830788);
 
     service.getComment(27830788).subscribe((data) => {
       expect(data).toEqual(expectedData);

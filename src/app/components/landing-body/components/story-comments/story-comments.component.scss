@@ -48,3 +48,11 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .story-add-comment-section #story-text-area {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+  }
+}

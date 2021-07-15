@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { zip } from 'rxjs';
+import { Observable, zip } from 'rxjs';
 import { concatMap } from 'rxjs/operators';
+import { TOP_STORY_LENGTH } from 'src/app/constants/statics/statics';
 import { NewsDataService } from '../news-data/news-data.service';
 
 @Injectable({
@@ -12,8 +13,8 @@ export class ProcessDataService {
   getTopStories() {
     return this.newsDataService.getTopStories().pipe(
       concatMap((topStoryIds) => {
-        let topFiveStoryIds = topStoryIds?.slice(0, 5);
-        let storyInfoObservables: Array<any> = [];
+        let topFiveStoryIds = topStoryIds?.slice(0, TOP_STORY_LENGTH);
+        let storyInfoObservables: Array<Observable<any>> = [];
         topFiveStoryIds?.forEach((storyId: string) => {
           storyInfoObservables.push(
             this.newsDataService.getStoryDetails(storyId)

@@ -18,6 +18,9 @@ export class StoryDetailsComponent {
   @Input() isCommentContainer: boolean = false;
   @Output() emitShowComments: EventEmitter<number> = new EventEmitter();
 
+  /**
+   * This method will inform the parent to show the comments of the story
+   */
   showComments() {
     this.emitShowComments.emit(this.index);
   }
