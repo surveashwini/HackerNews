@@ -15,9 +15,9 @@
     <span class="story-other-details">
       <span class="story-score-by"
         >{{ story?.score }} points by
-        <span class="story-by">{{ story?.by }}</span></span
-      >
-      <span class="story-time"> {{ story?.time | dateAgo }}</span>
+        <span class="story-by">{{ story?.by }}</span>
+      </span>
+      <span class="story-time">{{ story?.time | dateAgo }}</span>
       <span class="story-hide">hide</span>
       <span class="story-comments" (click)="showComments()"
         >{{ story?.kids?.length }} comments</span
